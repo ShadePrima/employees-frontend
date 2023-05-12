@@ -5,7 +5,7 @@ import { Layout, Space, Typography } from 'antd'
 import CustomButton from '../../ui/custom-button'
 import { Paths } from '../../paths'
 
-import { TeamOutlined } from '@ant-design/icons'
+import { LoginOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons'
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -23,10 +23,14 @@ const Header = () => {
 
         <Space>
           <Link to={Paths.register}>
-            <CustomButton type='ghost'>Register</CustomButton>
+            <CustomButton type='ghost' icon={<UserOutlined />}>
+              Register
+            </CustomButton>
           </Link>
           <Link to={Paths.login}>
-            <CustomButton type='ghost'>Enter</CustomButton>
+            <CustomButton type='ghost' icon={<LoginOutlined />}>
+              Enter
+            </CustomButton>
           </Link>
         </Space>
       </Layout.Header>
